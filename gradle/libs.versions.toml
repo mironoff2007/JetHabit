@@ -9,6 +9,7 @@ klock = "3.4.0"
 appcompat = "1.6.1"
 activity-compose = "1.7.1"
 material = "1.8.0"
+org-jetbrains-kotlin-jvm = "1.8.0"
 
 [libraries]
 kodein = { module = "org.kodein.di:kodein-di", version.ref = "kodein" }
@@ -36,3 +37,5 @@ kotlin-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-j
 
 klock-common = { module = "com.soywiz.korlibs.klock:klock", version.ref = "klock" }
 klock-jvm = { module = "com.soywiz.korlibs.klock:klock-jvm", version.ref = "klock" }
+[plugins]
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }

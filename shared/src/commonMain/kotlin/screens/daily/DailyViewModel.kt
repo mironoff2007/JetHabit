@@ -13,6 +13,7 @@ import screens.daily.models.DailyAction
 import screens.daily.models.DailyEvent
 import screens.daily.models.DailyViewState
 import screens.daily.views.HabitCardItemModel
+import com.example.lib2.MyClass
 
 class DailyViewModel : BaseSharedViewModel<DailyViewState, DailyAction, DailyEvent>(
     initialState = DailyViewState.Loading
@@ -20,6 +21,7 @@ class DailyViewModel : BaseSharedViewModel<DailyViewState, DailyAction, DailyEve
 
     private val dailyRepository: DailyRepository = Inject.instance()
     private val medicationRepository: MedicationRepository = Inject.instance()
+    val v = MyClass()
 
     private var currentDate: DateTime = DateTime.now()
 

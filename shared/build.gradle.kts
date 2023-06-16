@@ -53,6 +53,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(project(":lib"))
+                implementation(project(":lib2"))
                 implementation(compose.ui)
                 implementation(compose.foundation)
                 implementation(compose.material)
@@ -79,6 +80,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
+                implementation(project(":lib2"))
                 implementation(libs.android.material)
                 implementation(libs.sqldelight.android)
             }
@@ -90,7 +92,9 @@ kotlin {
         }
         val iosMain by getting {
             dependencies {
+
                 implementation(libs.sqldelight.native)
+                implementation(project(":lib"))
             }
         }
         val iosTest by getting
@@ -106,11 +110,14 @@ kotlin {
                 implementation(compose.desktop.common)
                 implementation(libs.sqldelight.desktop)
                 implementation(libs.klock.jvm)
+
             }
         }
 
         val jsMain by getting {
             dependencies {
+                implementation(project(":lib"))
+
                 implementation(libs.sqldelight.js)
             }
         }
@@ -118,6 +125,8 @@ kotlin {
         val macosMain by creating {
             dependsOn(commonMain)
             dependencies {
+                implementation(project(":lib"))
+
                 implementation(libs.sqldelight.native)
             }
         }
